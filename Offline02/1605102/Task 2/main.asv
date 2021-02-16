@@ -1,0 +1,11 @@
+shampoo = csvread('shampoo.csv',1,0);
+
+givenRows = shampoo(:,2)~=0;
+givenShampoo = shampoo(givenRows,:);
+missingRows = shampoo(:,2)==0;
+missingShampoo = shampoo(missingRows,:);
+
+smp_x = givenShampoo(:,1);
+smp_y = givenShampoo(:,2);
+scatter(smp_x,smp_y,40,'b','filled');
+xlabe
